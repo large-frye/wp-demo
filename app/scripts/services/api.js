@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('waPoDemoApp')
-  .service('API', function API() {
+  .service('API', function API($http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 
-    var baseURL = "http://wp-personlization-dev-web-1454444837.us-east-1.elb.amazonaws.com/api/data/";
+    var baseURL = "/api/data/";
 
     function openAPIInNewWindow(uuid, days) {
         var pathToRender = baseURL + uuid + "/" + days;
@@ -12,8 +12,14 @@ angular.module('waPoDemoApp')
         window.open(pathToRender, '_blank');
     }
 
+    function retrieveAPIData(uuid, days) {
+        var pathToRetrieve = baseURL + uuid + "/" + days;
+        return $http.get(pathToRetrieve);
+    }
+
     return {
         baseURL: baseURL,
-        openAPI: openAPIInNewWindow
+        // openAPI: openAPIInNewWindow,
+        retrieve: retrieveAPIData
     }
   });

@@ -2,10 +2,12 @@
 
 angular.module('waPoDemoApp')
     .controller('ResultsCtrl', function($scope, $routeParams, API) {
-        console.log($routeParams);
-        // $scope.resultData = 
+        $scope.resultData = undefined;
 
-        $scope.searchWithParams = function() {
-            API.openAPI($routeParams.uuid, $routeParams.days);
-        }
+        API.retrieve($routeParams.uuid, $routeParams.days).then(function(result){
+            $scope.resultData = result.data;
+            console.log($scope.resultData);
+        });
+        
+
     });
