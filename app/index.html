@@ -18,11 +18,22 @@
   </head>
   <body ng-app="waPoDemoApp">
 
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">WaPoDemo</h3>
+</div>
 
     <!-- Add your site or application content here -->
     <div class="container" ng-view=""></div>
 
     
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
