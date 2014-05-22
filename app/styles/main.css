@@ -93,3 +93,7 @@ body {
 .narrow-input {
   width: 60px;
 }
+.search-result-item {
+  font-size: 20px;
+  font-weight: bold;
+}
