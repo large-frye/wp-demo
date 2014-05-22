@@ -16,9 +16,13 @@ angular.module('waPoDemoApp', [
         templateUrl: 'views/about.html',
         // controller: 'MainCtrl'
       })
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
-        // controller: 'MainCtrl'
+      .when('/results/:uuid/', {
+        templateUrl: 'views/results.html',
+        controller: 'ResultsCtrl'
+      })
+      .when('/results/:uuid/period/:days', {
+        templateUrl: 'views/results.html',
+        controller: 'ResultsCtrl'
       })
       .otherwise({
         redirectTo: '/'

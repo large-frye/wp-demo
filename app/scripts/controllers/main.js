@@ -5,13 +5,9 @@ angular.module('waPoDemoApp')
 
     $scope.searchParams = {};
 
-    $scope.buttonTest = function() {
-        console.log($scope.searchForm.uuidField);
-    }
-
-    $scope.basicAPICaller = function() {
-        console.log("calling from a service now!");
-        API.openAPI($scope.searchParams.uuid, $scope.searchParams.days);
+    $scope.performSearch = function() {
+        var searchPath = "/results/" + $scope.searchParams.uuid + "/period/" + $scope.searchParams.days;
+        $location.path(searchPath);
     }
 
 
