@@ -21,9 +21,12 @@ angular.module('waPoDemoApp')
         console.log($scope.searchForm.uuidField);
     }
 
-    $scope.basicAPICaller = function(UUID, days) {
-        var baseURL = API.baseURL;
-        $location.path(baseURL + UUID + "/" + days);
+    $scope.basicAPICaller = function() {
+        var baseURL = API.baseURL,
+            uuid = $scope.searchParams.uuid,
+            days = $scope.searchParams.days;
+
+        window.location = baseURL + uuid + "/" + days;
     }
 
 
