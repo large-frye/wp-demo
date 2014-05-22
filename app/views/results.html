@@ -3,7 +3,7 @@
 <div class="jumbotron">
 <ul id="search-results-list">
     <li class="search-result-item" ng-repeat="item in resultData.historical">
-        {{item.uri}}
+        <strong>URI: "{{item.uri}}"</strong>, date: {{item.accesstime}}
     </li>
 </ul>
 </div>
