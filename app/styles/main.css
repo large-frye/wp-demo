@@ -77,3 +77,10 @@ body {
     border-bottom: 0;
   }
 }
+
+.search-form {
+  height: 200px;
+}
+.input-set {
+  margin: 20px 0;
+}
