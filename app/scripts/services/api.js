@@ -6,8 +6,14 @@ angular.module('waPoDemoApp')
 
     var baseURL = "http://wp-personlization-dev-web-1454444837.us-east-1.elb.amazonaws.com/api/data/";
 
+    function openAPIInNewWindow(uuid, days) {
+        var pathToRender = baseURL + uuid + "/" + days;
+
+        window.open(pathToRender, '_blank');
+    }
 
     return {
-        baseURL: baseURL
+        baseURL: baseURL,
+        openAPI: openAPIInNewWindow
     }
   });
