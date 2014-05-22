@@ -24,9 +24,10 @@ angular.module('waPoDemoApp')
     $scope.basicAPICaller = function() {
         var baseURL = API.baseURL,
             uuid = $scope.searchParams.uuid,
-            days = $scope.searchParams.days;
+            days = $scope.searchParams.days,
+            pathToRender = baseURL + uuid + "/" + days;
 
-        window.location = baseURL + uuid + "/" + days;
+        window.open(pathToRender, '_blank');
     }
 
 
