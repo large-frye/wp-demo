@@ -6,7 +6,7 @@ angular.module('waPoDemoApp')
 
         API.retrieve($routeParams.uuid, $routeParams.days).then(function(result){
             $scope.resultData = result.data;
-            console.log($scope.resultData);
+
         });
         
 

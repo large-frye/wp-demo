@@ -5,6 +5,7 @@ angular.module('waPoDemoApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ngAnimate',
   'xl-activetabs'
 ])
   .config(function ($routeProvider) {

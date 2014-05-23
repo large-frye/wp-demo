@@ -18,8 +18,7 @@ angular.module('xl-activetabs', [])
                             pathToCheck = $location.path().split('/')[pathLevel] || "current $location.path doesn't reach this level",
                             // This var finds grabs the same level of the href attribute
                             tabLink = attrs.href.split('/')[pathLevel] || "href doesn't include this level";
-                        console.log(pathToCheck);
-                        console.log(tabLink);
+
                         // Above, we use the logical 'or' operator to provide a default value in cases 
                         // where 'undefined' would otherwise be returned.
                         // This prevents cases where undefined===undefined, possibly causing multiple tabs to be 'active'.

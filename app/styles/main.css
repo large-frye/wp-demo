@@ -85,21 +85,32 @@
     font-size: 20px;
     margin-bottom: 25px;
 }
+div[ng-view].ng-enter {
+    animation: bounceInRight 2.0s;
+    -webkit-animation: bounceInRight 2.0s;
+}
+div[ng-view].ng-leave {
+    animation: bounceOutLeft 0.5s;
+    -webkit-animation: bounceOutLeft 0.5s;
+}
 .results-container.jumbotron {
     max-height: 700px;
     overflow: scroll;
     padding: 30px;
 }
-
 input.ng-invalid.ng-dirty {
-background-color: #FA787E;
+    background-color: #FA787E;
 }
 input.ng-valid.ng-dirty {
-background-color: #78FA89;
+    background-color: #78FA89;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+.search-form.ng-valid {
+    animation: bounce 1.0s;
+    -webkit-animation: bounce 1.0s;
 }
