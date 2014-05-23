@@ -1,9 +1,9 @@
 <h2>Search Results</h2>
 
-<div class="jumbotron">
+<div class="jumbotron results-container">
 <ul id="search-results-list">
     <li class="search-result-item" ng-repeat="item in resultData.historical">
-        <strong>URI: "{{item.uri}}"</strong>, date: {{item.accesstime}}
+        <strong>URI: "{{item.uri}}"</strong>, <br/>date: {{item.accesstime}}
     </li>
 </ul>
 </div>

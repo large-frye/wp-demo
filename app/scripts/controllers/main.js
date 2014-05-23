@@ -10,5 +10,6 @@ angular.module('waPoDemoApp')
         $location.path(searchPath);
     }
 
+    $scope.uuidPattern = /[a-z, A-Z, 0-9]{16}(-)[a-z, A-Z, 0-9]{14}/
 
   });

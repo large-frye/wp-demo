@@ -2,20 +2,20 @@
 
 <div class="jumbotron">
   <h2>Enter Your Search Here:</h2>
-  <form class="lead search-form" name="searchForm">
+  <form class="lead search-form" name="searchForm" novalidate>
 
     <div class="input-set">
       <p class="field-label">UUID:</p>
-      <input class="wide-input" name="uuidField" ng-model="searchParams.uuid"/>
+      <input class="wide-input" name="uuidField" ng-model="searchParams.uuid" type="text" ng-pattern="uuidPattern" required />
     </div>
 
     <div class="input-set">
       <p class="field-label">Days:</p>
-      <input class="narrow-input" name="daysField" ng-model="searchParams.days"/>
+      <input class="narrow-input" name="daysField" ng-model="searchParams.days" type="number" max="365" required/>
     </div>
 
   </form>
-  <p><a class="btn btn-lg btn-success" ng-click="performSearch()">Search!</a></p>
+  <p><a class="btn btn-lg btn-success" ng-click="performSearch()" ng-disabled="searchForm.$invalid">Search!</a></p>
 </div>
 
 <div class="row marketing">
