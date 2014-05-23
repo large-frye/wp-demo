@@ -4,11 +4,12 @@ angular.module('waPoDemoApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'xl-activetabs'
 ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/home', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
@@ -25,7 +26,7 @@ angular.module('waPoDemoApp', [
         controller: 'ResultsCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
 
   });
